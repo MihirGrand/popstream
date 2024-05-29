@@ -6,6 +6,7 @@ import theme from "./paint-roller.svg";
 import pop from "./popcorn.png";
 import YouTube from "react-youtube";
 import GoTop from "./components/scrollToTop.jsx";
+import { MOVIEDB_KEY } from "../.env";
 
 function App() {
   const lightIcon =
@@ -25,8 +26,7 @@ function App() {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYjQxMTQ3ZTg2OWUyZjcyZTI4ZWE4NzlmNDFhZWQ5MCIsInN1YiI6IjY2NTQzYzlmZDlkMDIxY2FiNDVhOTlkYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wUqnzd-PHcayBNqTZvX2h6kzvmC3wZDykeAOOUy5jcw",
+        Authorization: "Bearer {MOVIEDB_KEY}",
       },
     };
 
