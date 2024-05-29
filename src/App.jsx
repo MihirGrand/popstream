@@ -6,7 +6,6 @@ import theme from "./paint-roller.svg";
 import pop from "./popcorn.png";
 import YouTube from "react-youtube";
 import GoTop from "./components/scrollToTop.jsx";
-import { MOVIEDB_KEY } from "../.env";
 
 function App() {
   const lightIcon =
@@ -21,12 +20,14 @@ function App() {
   const [currentIcon, setCurrentIcon] = useState(lightIcon);
   const [poster, setPoster] = useState("");
 
+  const MOVIEDB_KEY = import.meta.env.VITE_MOVIEDB_KEY;
+
   useEffect(() => {
     const options = {
       method: "GET",
       headers: {
         accept: "application/json",
-        Authorization: "Bearer {MOVIEDB_KEY}",
+        Authorization: `Bearer ${MOVIEDB_KEY}`,
       },
     };
 
